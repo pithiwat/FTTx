@@ -220,4 +220,14 @@ class SiteController extends Controller
     {
         return $this->render('overviewbma');
     }
+
+    public function actionChartdetail()
+    {
+        $this->layout = 'chartDetailLayout';
+        // if (Yii::$app->request->post()) {
+        //     $data = Yii::$app->request->post();
+        //     $email = $data['id'];
+        // }
+        return $this->render('chartdetail');
+    }
 }
