@@ -20,6 +20,11 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <style>
+        .customStopSize {
+            font-size: 0.6em;
+        }
+    </style>
     <?php $this->head() ?>
 </head>
 <body>
@@ -38,11 +43,11 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Overview',
-        'items' => [
-             ['label' => 'Overview BMA', 'url' => ['/site/overviewbma']],
-             '<li class="divider"></li>',
-             ['label' => 'Overview UPC', 'url' => ['/site/overviewupc']],
-        ]],
+            'items' => [
+                ['label' => 'Overview BMA', 'url' => ['/site/overviewbma']],
+                '<li class="divider"></li>',
+                ['label' => 'Overview UPC', 'url' => ['/site/overviewupc']],
+            ]],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
